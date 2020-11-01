@@ -99,7 +99,7 @@ module.exports = (robot) ->
     currMsgRecord = sorted[0][1]
     msg = "This week's top poster is @#{name}"
     msg += " with #{currMsgRecord} messages"
-    robot.send room: 'general', msg
+    robot.send room: 'random', msg
     if currMsgRecord >= 50
       robot.emit "plusplus", {username: name}
     for own key, user of robot.brain.data.users
